@@ -1,0 +1,24 @@
+{
+  "name": "project_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "regression": "npx playwright test",
+    "webTests": "npx playwright test --grep @Web --config playwright.config.js",
+    "APITests": "npx playwright test --grep @API",
+    "SafarNewConfig": "npx playwright test --config playwright.config1.js --project=safari",
+    "testsTS": "npx playwright test --config playwright.config.ts --grep @TS",
+    "testCucumber": "npx cucumber-js -p test_runner --config cucumber.config.js --tags @VIP; node ./htmlReportGenerator.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^8.9.1",
+    "@playwright/test": "^1.29.1",
+    "cucumber-html-reporter": "^5.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
