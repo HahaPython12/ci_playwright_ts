@@ -1,0 +1,7 @@
+{
+    "cucumberautocomplete.steps": [
+        "././acceptance/steps/*ts"
+    ],
+    "cucumberautocomplete.syncfeatures": "./acceptance/features/*features",
+    "cucumberautocomplete.strictGherkinCompletion": true
+}
