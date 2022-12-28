@@ -22,7 +22,11 @@ jobs:
 
     # install all the dependencies from pasckage.json
       - name: Install dependencies
-        run: npm install  
+        run: npm install 
+
+    # install playwright
+      - name: Install playwright
+        run: npx playwright install  
       
     # run the tests
       - name: run tests
