@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+    - main
+
+# jobs are the task which will run whenever there is a change
+jobs:
+  e2e-tests:
+    runs-on: macos-latest # or ubuntu-latest, windows-latest
+
+    steps:
+    # download all the code to the actions-maschine
+      - uses: actions/checkout@v2
+
+    # setup the version from pacakage.json
+      - uses: actions/setup-node@v1
+
+    # here it will know how to run the playwright test-scripts
+      - uses: microsoft/playwright-github-action@v1
+
+    # install all the dependencies from pasckage.json
+      - name: Install dependencies
+        run: npm install  
+      
+    # run the tests
+      - name: run tests
+        run: npm run testCucumber

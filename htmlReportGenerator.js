@@ -12,7 +12,7 @@ var options = {
     screenshotsDirectory: 'Reports/Screenshots/',
     storeScreenshots: true,
     reportSuiteAsScenarios: true,
-    launchReport: true,
+    launchReport: false,
     metadata: {
         "App Version": "1.1.1",
         "Test Enviroment": "QA",
