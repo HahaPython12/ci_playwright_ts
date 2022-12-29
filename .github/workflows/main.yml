@@ -32,7 +32,7 @@ jobs:
       - name: run tests
         run: npm run testCucumber
       
-      - nmae: Archieve Cucumber Reports
+      - name: Archieve Cucumber Reports
         uses: actions/upload-artifact@v3
         if: always()
         with:
