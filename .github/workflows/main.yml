@@ -10,10 +10,10 @@ jobs:
 
     steps:
     # download all the code to the actions-maschine
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
     # setup the version from pacakage.json
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v3
         with:
           node-version: 14
 
@@ -26,7 +26,7 @@ jobs:
 
     # install playwright
       - name: Install playwright
-        run: npx playwright install --with-deps
+        run: npx playwright install
       
     # run the tests
       - name: run tests
