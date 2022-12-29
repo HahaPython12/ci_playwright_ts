@@ -3,6 +3,7 @@ let options = [
     '--require ./acceptance/steps/*.steps.ts',
     '--format progress',
     '--format json:./Reports/cucumber_report.json',
+    '--force-exit',
 ].join(' ');
 
 let run_features = [
