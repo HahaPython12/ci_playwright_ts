@@ -4,8 +4,6 @@ node_modules/
 /playwright/.cache/
 /test-results/
 /tests-examples/
-.DS_Store
-*.png
 /tests/MoreValidations.spec.js-snapshots
 /playwright-default-config.js
 /playwright.config1.js
