@@ -28,6 +28,7 @@ After(async function(Scenario) {
     if(Scenario.result!.status === Status.FAILED){
         await this.attach(await page.screenshot({path: `./Screenshots/${Scenario.pickle.name}.png`, fullPage: true}), "image/png");
         //process.exit();
+        process.exitCode = 1;
         // throw new Error(`step failed`);
     }
     await browser.close();
