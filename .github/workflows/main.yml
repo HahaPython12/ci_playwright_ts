@@ -7,9 +7,9 @@ on:
 jobs:
   e2e-tests:
     runs-on: macos-latest # or ubuntu-latest, windows-latest
-    strategy:
-      fail-fast: true
-      
+    #strategy:
+    #  fail-fast: true
+
     steps:
     # download all the code to the actions-maschine
       - uses: actions/checkout@v3
