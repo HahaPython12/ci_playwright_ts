@@ -6,6 +6,7 @@ on:
 # jobs are the task which will run whenever there is a change
 jobs:
   e2e-tests:
+    fail-fast: true:
     runs-on: macos-latest # or ubuntu-latest, windows-latest
 
     steps:
