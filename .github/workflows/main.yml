@@ -12,9 +12,11 @@ jobs:
 
     steps:
     # download all the code to the actions-maschine
+      - name: Get Code
       - uses: actions/checkout@v3
 
     # setup the version from pacakage.json
+      - name: Install NodeJS
       - uses: actions/setup-node@v3
         with:
           node-version: 14
@@ -24,14 +26,14 @@ jobs:
 
     # install all the dependencies from pasckage.json
       - name: Install dependencies
-        run: npm install 
+        run: npm install  # npm ci will install only the depenencies in the project
 
     # install playwright
       - name: Install playwright
         run: npx playwright install
       
     # run the tests
-      - name: run tests
+      - name: Run Tests
         run: npm run testCucumber
       
       - name: Archieve Cucumber Reports
