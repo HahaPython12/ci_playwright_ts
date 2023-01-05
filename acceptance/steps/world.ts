@@ -6,7 +6,7 @@ let page: Page;
 let browser: Browser;
 // let poManager: POManager;
 
-setDefaultTimeout(60000);
+setDefaultTimeout(30 * 1000);
 
 Before(async () => {
     try {
@@ -30,6 +30,8 @@ After(async function(Scenario) {
         // process.exit(1);
         //process.exitCode = 1;
         // throw new Error(`step failed`);
+        page.evaluate(_ => {}, `browserstack_executor: ${JSON.stringify({action: 'setSessionStatus',arguments: {status: 'failed',reason: '<the string reason goes here>'}})}`);
+        // this.setTestStatus(Scenario.result!.status, Error); // <-- Mark the test as failed in the report
     }
     await browser.close();
 });
