@@ -31,7 +31,7 @@ jobs:
       
     # run the tests
       - name: run tests
-        run: npm run testCucumber2 || exit 1
+        run: npm run testCucumber2
         continue-on-error: false
       
       - name: Archieve Cucumber Reports

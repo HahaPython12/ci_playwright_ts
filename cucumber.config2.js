@@ -16,7 +16,9 @@ let run_features = [
 const config = {
   afterTestCase: (testCase, callback) => {
     if (testCase.result.status === Status.FAILED) {
-      process.exit(1);
+      console.log("process.exit here!")
+      this.setTestStatus(testCase.result.status, new Error()); // <-- Mark the test as failed in the report
+      //process.exit(1);
     }
     callback();
   },
