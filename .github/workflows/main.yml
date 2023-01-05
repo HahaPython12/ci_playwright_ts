@@ -32,7 +32,8 @@ jobs:
     # run the tests
       - name: run tests
         run: npm run testCucumber2
-        uses: sidharthv96/playwright-report-action
+
+      - uses: sidharthv96/playwright-report-action
       
       - name: Archieve Cucumber Reports
         uses: actions/upload-artifact@v3
