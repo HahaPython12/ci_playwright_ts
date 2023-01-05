@@ -24,10 +24,6 @@ jobs:
     # install all the dependencies from pasckage.json
       - name: Install dependencies
         run: npm ci  # npm ci will install only the depenencies in project
-
-    # install playwright
-      - name: Install playwright
-        run: npx playwright install --with-deps
       
     # run the tests
       - name: run tests
