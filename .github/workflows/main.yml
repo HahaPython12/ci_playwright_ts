@@ -12,9 +12,11 @@ jobs:
 
     steps:
     # download all the code to the actions-maschine
+      - name: Get Code
       - uses: actions/checkout@v3
 
     # setup the version from pacakage.json
+      - name: Install NodeJS
       - uses: actions/setup-node@v3
         with:
           node-version: 14
