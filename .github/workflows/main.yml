@@ -33,6 +33,15 @@ jobs:
       - name: run tests
         run: npm run testCucumber2
         # continue-on-error: false
+
+      - name: Check if test failed
+          if: always()
+          run: |
+            if [ $? -ne 0 ]
+            then
+              echo "Tests failed"
+              --exit
+            fi
       
       - name: Archieve Cucumber Reports
         uses: actions/upload-artifact@v3
