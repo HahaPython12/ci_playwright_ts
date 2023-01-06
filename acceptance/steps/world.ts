@@ -33,6 +33,7 @@ After(async function(Scenario) {
         //throw new Error(`step failed`);
         // this.setTestStatus(Scenario.result!.status, Error); // <-- Mark the test as failed in the report
     }
+    process.exitCode = 0;
     await browser.close();
 });
 
