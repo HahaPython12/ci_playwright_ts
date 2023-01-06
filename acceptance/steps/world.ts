@@ -33,6 +33,7 @@ After(async function(Scenario) {
         console.log("Setting exit code to 1");
         exitCode = 1;
         process.exitCode = 1;
+        core.error("One Test Failed");
         //throw new Error(`step failed`);
         // this.setTestStatus(Scenario.result!.status, Error); // <-- Mark the test as failed in the report
     }
