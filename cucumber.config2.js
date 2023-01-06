@@ -13,6 +13,7 @@ let run_features = [
   options,
 ].join(' ');
 
+/*
 const config = {
   // should be called after each testcase
   // testcase is an object that represent the latest test run
@@ -26,7 +27,9 @@ const config = {
     callback();
   },
 };
+*/
+
 module.exports = {
   test_runner: run_features,
-  config,
+  // config,
 };
