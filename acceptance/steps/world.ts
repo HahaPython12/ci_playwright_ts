@@ -1,5 +1,6 @@
 import { After, Before, setDefaultTimeout, Status } from "@cucumber/cucumber";
 import { Browser, chromium, Page, webkit } from "@playwright/test";
+import * as core from '@actions/core';
 // import { POManager } from "../../pageobjectsTS/POManager";
 
 let page: Page;
@@ -34,6 +35,11 @@ After(async function(Scenario) {
         // this.setTestStatus(Scenario.result!.status, Error); // <-- Mark the test as failed in the report
     }
     process.exitCode = 0;
+    
+    if (process.exitCode){
+        core.setFailed("One Test Failed");
+    }
+
     await browser.close();
 });
 
