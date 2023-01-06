@@ -33,11 +33,12 @@ jobs:
       - name: run tests
         run: npm run testCucumber2
         # continue-on-error: false
-
-      - name: Check if test failed
-        if: process.exitCode != 0
-        run: npm exit
       
+      - name: Check exit code
+        if: ${{ eq(process.exitCode, 1) }}
+        run: |
+          echo "One or more tests failed"
+
       - name: Archieve Cucumber Reports
         uses: actions/upload-artifact@v3
         if: always()
