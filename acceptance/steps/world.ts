@@ -26,17 +26,18 @@ Before(async () => {
 });
 
 After(async function(Scenario) {
+    let exitCode: number = 0;
     if(Scenario.result!.status === Status.FAILED){
         await this.attach(await page.screenshot({path: `./Screenshots/${Scenario.pickle.name}.png`, fullPage: true}), "image/png");
         // process.exit(1);
         console.log("Setting exit code to 1");
-        process.exitCode = 1;
+        exitCode = 1;
         //throw new Error(`step failed`);
         // this.setTestStatus(Scenario.result!.status, Error); // <-- Mark the test as failed in the report
     }
-    process.exitCode = 0;
+    // process.exitCode = 0;
 
-    if (process.exitCode){
+    if (exitCode == 1){
         console.log("Stop Process");
         core.setFailed("One Test Failed");
     }
