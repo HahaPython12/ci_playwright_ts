@@ -16,4 +16,4 @@ Feature: User login
     Examples:
         | username          | password | 
         | hallodu@gmail.com | Aa12345! | 
-        | hallodu.gmail.com | Aa12345! | 
+        | hallodu@gmail.com | Aa12345! | 

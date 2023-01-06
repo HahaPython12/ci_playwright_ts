@@ -14,12 +14,15 @@ let run_features = [
 ].join(' ');
 
 const config = {
+  // should be called after each testcase
+  // testcase is an object that represent the latest test run
   afterTestCase: (testCase, callback) => {
     if (testCase.result.status === Status.FAILED) {
       console.log("process.exit here!")
       this.setTestStatus(testCase.result.status, new Error()); // <-- Mark the test as failed in the report
       //process.exit(1);
     }
+    // signals the end of the hook
     callback();
   },
 };
