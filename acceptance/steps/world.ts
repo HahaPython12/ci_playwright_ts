@@ -35,8 +35,9 @@ After(async function(Scenario) {
         // this.setTestStatus(Scenario.result!.status, Error); // <-- Mark the test as failed in the report
     }
     process.exitCode = 0;
-    
+
     if (process.exitCode){
+        console.log("Stop Process");
         core.setFailed("One Test Failed");
     }
 
