@@ -20,6 +20,7 @@
   "license": "ISC",
   "dependencies": {
     "@actions/core": "^1.10.0",
+    "@actions/exec": "^1.1.1",
     "@cucumber/cucumber": "^8.10.0",
     "@playwright/test": "^1.29.1",
     "cucumber-html-reporter": "^5.5.0",
