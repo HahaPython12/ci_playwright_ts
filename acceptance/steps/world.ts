@@ -34,7 +34,7 @@ After(async function(Scenario) {
         //exitCode = 1;
         //process.exitCode = 1;
         //core.error("One Test Failed");
-        core.setFailed("One Test Failed");
+        await core.setFailed("One Test Failed");
         //throw new Error(`step failed`);
         // this.setTestStatus(Scenario.result!.status, Error); // <-- Mark the test as failed in the report
     }
