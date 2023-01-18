@@ -28,6 +28,9 @@ jobs:
     # install playwright
       - name: Install playwright
         run: npx playwright install --with-deps
+    
+      - name: Run code style check
+        run: npm run lint
       
     # run the tests
       - name: run tests
