@@ -12,7 +12,8 @@
     "testCucumber": "npx cucumber-js -p test_runner --config cucumber.config.js --tags @VIP; node ./htmlReportGenerator.js",
     "exit": "npx --exit",
     "testCucumber2": "npx cucumber-js -p test_runner --config cucumber.config2.js --tags @VIP; node ./htmlReportGenerator.js",
-    "lint": "eslint './**/*.ts' "
+    "lint": "eslint './**/*.ts' ",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.48.2",
-    "eslint": "^8.32.0"
+    "eslint": "^8.32.0",
+    "husky": "^8.0.0"
   }
 }
