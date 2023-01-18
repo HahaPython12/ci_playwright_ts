@@ -34,9 +34,9 @@ jobs:
         run: npm run testCucumber
         # continue-on-error: false
       
-      - name: Check exit code
-        if: failure()
-        run: echo "One or more tests failed"
+      #- name: Check exit code
+      #  if: failure()
+      #  run: echo "One or more tests failed"
 
       - name: Archieve Cucumber Reports
         uses: actions/upload-artifact@v3
