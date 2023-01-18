@@ -16,7 +16,7 @@ Given('I navigate to {string}', async (expectedText: string) => {
     const actualText = await loginPage.actualTextOnLoginPage.textContent();
     console.log(actualText);
     expect(expectedText).toEqual(actualText!.trim());
-    console.log("Hallo_login")
+    console.log("Hallo_login");
 });
 
 

@@ -13,7 +13,7 @@ Before(async () => {
     try {
         browser = await chromium.launch({headless: false});
         const context = await browser.newContext();
-        page = await context.newPage()
+        page = await context.newPage();
         await page.goto("https://rahulshettyacademy.com/client");
         console.log(`captured site title as ${await page.title()}`);
         // const poManager = new POManager(page, 'abc');

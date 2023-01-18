@@ -1,0 +1,20 @@
+{
+    "env": {
+        "browser":  true,
+        "es2021":   true
+    },
+    "extends": "eslint:recommended",
+    // use TS parser
+    "parser": "@typescript-eslint/parser",
+    // which JS sytax is valid
+    "parserOptions": {
+        "ecmaVersion":  "latest",
+        "sourcetype":   "module"
+    },
+    "rules":{
+        "semi": "warn",
+        // turned them off cause for checking pipline
+        "no-unused-vars": "off",
+        "no-undef": "off"
+    }
+}

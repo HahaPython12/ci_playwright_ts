@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { page } from './world';
-import { expect, Locator } from '@playwright/test';
+import { expect } from '@playwright/test';
 import { POManager } from '../../pageobjectsTS/POManager';
 
 Given('I am already logged in to {string} with {string}, {string} and a {string} inside the cart.', async (expectedText: string, givenEmail: string, password: string, product: string) => {

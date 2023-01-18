@@ -11,7 +11,8 @@
     "testsTS": "npx playwright test --config playwright.config.ts --grep @TS",
     "testCucumber": "npx cucumber-js -p test_runner --config cucumber.config.js --tags @VIP; node ./htmlReportGenerator.js",
     "exit": "npx --exit",
-    "testCucumber2": "npx cucumber-js -p test_runner --config cucumber.config2.js --tags @VIP; node ./htmlReportGenerator.js"
+    "testCucumber2": "npx cucumber-js -p test_runner --config cucumber.config2.js --tags @VIP; node ./htmlReportGenerator.js",
+    "lint": "eslint './**/*.ts' "
   },
   "keywords": [],
   "author": "",
@@ -23,5 +24,9 @@
     "cucumber-html-reporter": "^5.5.0",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0"
   }
 }

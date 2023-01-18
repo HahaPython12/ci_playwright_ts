@@ -15,7 +15,7 @@ export class OrderHistory{
 
     async searchForOrderIDAndSelectView(orderNumberValue: string){
         // console.log(await this.orderTableRows.nth(0).locator('th').textContent());
-        const orderNumberValueCut = this.getCutOrderID(orderNumberValue)
+        const orderNumberValueCut = this.getCutOrderID(orderNumberValue);
         // console.log('Number: ' + orderNumberValueCut)
 
         // wait until body is loaded

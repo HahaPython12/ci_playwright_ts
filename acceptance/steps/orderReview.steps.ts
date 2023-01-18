@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { page } from './world';
-import { expect, Locator } from '@playwright/test';
+import { expect } from '@playwright/test';
 import { POManager } from '../../pageobjectsTS/POManager';
 
 
