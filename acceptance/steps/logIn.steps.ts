@@ -38,7 +38,8 @@ Then('I should enter my account-page {string}', async (expectedPageTitle: string
         const textOfSubTitle = await subTitle.textContent();
         console.log(textOfSubTitle);
         expect(expectedPageTitle).toEqual(textOfSubTitle!.trim());
-        core.setFailed("One Test Failed");
+        process.exitCode = 1;
+        // core.setFailed("One Test Failed");
     //}catch{
         //process.exit(1);
     //}
