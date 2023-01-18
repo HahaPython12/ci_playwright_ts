@@ -1,6 +1,6 @@
 import { After, Before, setDefaultTimeout, Status } from "@cucumber/cucumber";
 import { Browser, chromium, Page, webkit } from "@playwright/test";
-import * as core from '@actions/core';
+const core = require('@actions/core');
 // import { POManager } from "../../pageobjectsTS/POManager";
 
 let page: Page;
@@ -33,8 +33,8 @@ After(async function(Scenario) {
         console.log("Setting exit code to 1");
         //exitCode = 1;
         //process.exitCode = 1;
-        core.error("One Test Failed");
-        core.setFailed;
+        //core.error("One Test Failed");
+        core.setFailed("One Test Failed");
         //throw new Error(`step failed`);
         // this.setTestStatus(Scenario.result!.status, Error); // <-- Mark the test as failed in the report
     }
