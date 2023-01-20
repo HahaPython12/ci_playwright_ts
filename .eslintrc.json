@@ -13,7 +13,7 @@
     },
     "rules":{
         "semi": "warn",
-        // turned them off cause for checking pipline
+        // turned them off cause for checking pipeline
         "no-unused-vars": "off",
         "no-undef": "off"
     }
