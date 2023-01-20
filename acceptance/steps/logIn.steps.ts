@@ -2,7 +2,8 @@ import { Given, When, Then } from "@cucumber/cucumber";
 import { page } from '../steps/world';
 import { expect, Locator } from '@playwright/test';
 import { POManager } from '../../pageobjectsTS/POManager';
-import * as core from '@actions/core';
+
+// import * as core from '@actions/core';
 
 
 
@@ -38,7 +39,8 @@ Then('I should enter my account-page {string}', async (expectedPageTitle: string
         const textOfSubTitle = await subTitle.textContent();
         console.log(textOfSubTitle);
         expect(expectedPageTitle).toEqual(textOfSubTitle!.trim());
-        process.exitCode = 1;
+        
+        // process.exitCode = 1;
         // core.setFailed("One Test Failed");
     //}catch{
         //process.exit(1);

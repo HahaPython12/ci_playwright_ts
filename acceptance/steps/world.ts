@@ -1,6 +1,6 @@
 import { After, Before, setDefaultTimeout, Status } from "@cucumber/cucumber";
 import { Browser, chromium, Page, webkit } from "@playwright/test";
-const core = require('@actions/core');
+import * as core from '@actions/core';
 // import * as exec from '@actions/exec'
 // import { POManager } from "../../pageobjectsTS/POManager";
 
